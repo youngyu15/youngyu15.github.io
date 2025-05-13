@@ -18,7 +18,7 @@ email: 'youngyu15@gmail.com'
 description: "I'm a software developer currently working in South Korea with mobile game developing experience."
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://youngyu15.github.io" # the base hostname & protocol for your site, e.g. https://example.com
-github_username: 'jamigibbs'
+github_username: 'youngyu15'
 
 # Build settings
 markdown: kramdown
