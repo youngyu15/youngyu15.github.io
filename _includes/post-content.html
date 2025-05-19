@@ -3,8 +3,18 @@
 
   <p class="excerpt">{{ post.lead_text }}</p>
 
-  {% if post.project_link != empty %}
-  <a href="{{ post.project_link }}" class="project-link"><button class="btn btn-default btn-lg"><i class="fa fa-{{post.button_icon}} fa-lg"></i>{{post.button_text}}</button></a>
+  {% if post.project_links and post.project_links.size > 0 %}
+  <div class="project-links">
+    {% for link in post.project_links %}
+      {% assign index = forloop.index0 %}
+      <a href="{{ link }}" class="project-link">
+        <button class="btn btn-default btn-lg">
+          <i class="fa fa-{{ post.button_icons[index] }} fa-lg"></i>
+          {{ post.button_texts[index] }}
+        </button>
+      </a>
+    {% endfor %}
+  </div>
   {% endif %}
 
   {% if post.tags != empty %}
